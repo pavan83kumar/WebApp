@@ -37,7 +37,7 @@
 					style="color: red"><strong>*</strong></span></label>
 				<div class="col-sm-8">
 					<input type="password" class="form-control" id="cpwd"
-						placeholder="Enter password" required>
+						placeholder="Enter password"  onchange=setFullname() required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -53,7 +53,7 @@
 					style="color: red"><strong>*</strong></span></label>
 				<div class="col-sm-8">
 					<input type="text" class="form-control" id="lname"
-						placeholder="Enter lastname" required>
+						placeholder="Enter lastname" onchange=setFullname() required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -171,6 +171,12 @@
 				alert(message);
 			}
 		}
+
+		function setFullname(){
+			var fname = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			return fname + " "+lname;
+			}
 
 		
 	</script>
